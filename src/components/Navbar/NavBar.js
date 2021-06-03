@@ -1,5 +1,6 @@
 import React from "react";
 import {Navbar,Nav,NavDropdown} from "react-bootstrap";
+import {CartWidget} from "../CartWidget/CartWidget"
 export const NavBar = () => {
   return (
     <>
@@ -41,6 +42,9 @@ export const NavBar = () => {
             </NavDropdown>
           </Nav>
           <Nav>
+          <Nav.Link href="#">
+              <CartWidget />
+            </Nav.Link>
             <Nav.Link href="#deets">
               Contacto
             </Nav.Link>

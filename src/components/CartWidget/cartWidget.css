@@ -1,0 +1,15 @@
+.cart:hover{
+    rotate: 20;
+    animation: moveTopBot 1s ease-out;
+}
+
+@keyframes moveTopBot{
+    0% {
+        transform: translateY(1px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
