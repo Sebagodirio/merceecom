@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Item from "../Item/Item";
 export const ItemList = (props) => {
   const { greeting, description } = props;
@@ -7,6 +7,7 @@ export const ItemList = (props) => {
   //funcion que simula el llamado a una base de datos
   const fetchItems = () => {
     const promesa = new Promise((resolve, reject) => {
+      let algunError = false
       setTimeout(() => {
         resolve([
           { title: greeting, description },
@@ -21,13 +22,22 @@ export const ItemList = (props) => {
           { title: greeting, description },
         ]);
       }, 2000);
+      if(algunError) reject("Ocurrio un error al obtener los items")
     });
     return promesa;
   };
 
-  fetchItems().then((data) => {
-    setResult(data);
-  });
+  useEffect(() => {
+    fetchItems()
+      .then(data => {
+        setResult(data)
+      })
+      .catch(error => {
+        setResult(error)
+        console.log(error)
+      })
+      
+  }, []);
 
   return (
     <div>
