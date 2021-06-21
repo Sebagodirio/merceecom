@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Aplicacion para venta de e-books online
 
 Este proyecto es una simulacion de un ecommerce hecho con react
 
