@@ -1,53 +1,86 @@
 import React from "react";
-import {Navbar,Nav,NavDropdown} from "react-bootstrap";
-import {CartWidget} from "../CartWidget/CartWidget"
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import { CartWidget } from "../CartWidget/CartWidget";
 export const NavBar = () => {
   return (
     <>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="danger"
-        variant="dark"
-      >
-        <Navbar.Brand href="#home">
-          Merceecom
+      <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
+        <Navbar.Brand>
+          <NavLink className="navbar-brand" activeClassName="selected" to={"/"}>
+            Merceecom
+          </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#features">
-              Productos
+            <Nav.Link>
+              <NavLink
+                className="nav-link"
+                activeClassName="selected"
+                to={"/catalogo"}
+              >
+                Productos
+              </NavLink>
             </Nav.Link>
-            <Nav.Link href="#pricing">
-              Nosotros
+            <Nav.Link>
+              <NavLink
+                className="nav-link"
+                activeClassName="selected"
+                to={"/about"}
+              >
+                Nosotros
+              </NavLink>
             </Nav.Link>
             <NavDropdown
               title="Categorias"
               id="collasible-nav-dropdown"
+              className="nav-link"
             >
-              <NavDropdown.Item href="#action/3.1">
-                categoria1
+              <NavDropdown.Item>
+                <NavLink
+                  className="dropdown-item"
+                  activeClassName="selected"
+                  to={"/category/1"}
+                >
+                  categoria1
+                </NavLink>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-              categoria2
+              <NavDropdown.Item>
+                <NavLink
+                  className="dropdown-item"
+                  activeClassName="selected"
+                  to={"/category/2"}
+                >
+                  categoria2
+                </NavLink>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
-              categoria3
+              <NavDropdown.Item>
+                <NavLink
+                  className="dropdown-item"
+                  activeClassName="selected"
+                  to={"/category/3"}
+                >
+                  categoria3
+                </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Todas las categorias
+              <NavDropdown.Item>
+                <NavLink
+                  className="dropdown-item"
+                  activeClassName="selected"
+                  to={"/catalogo"}
+                >
+                  Catalogo
+                </NavLink>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-          <Nav.Link href="#">
+            <Nav.Link href="#">
               <CartWidget />
             </Nav.Link>
-            <Nav.Link href="#deets">
-              Contacto
-            </Nav.Link>
+            <Nav.Link href="#deets">Contacto</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               Login
             </Nav.Link>

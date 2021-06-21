@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import libro from "../ItemDetail/img/indice.jpg"
-import ItemCount from "../ItemCount/ItemCount";
+import { Item } from "../Item/Item";
 
 export const ItemList = (props) => {
   const { greeting, description, price } = props;
@@ -45,15 +44,7 @@ export const ItemList = (props) => {
       <div className="d-flex flex-wrap justify-content-around container mt-5 mb-5">
         {result.map((item) => {
           return (
-            <div className="card p-2 m-1">
-            <img src={libro} className="card-img-top" alt="foto" />
-            <div className="card-body">
-                <h5 className="card-title">{item.title}</h5>
-                <p className="card-text">{item.description}</p>
-                <p className="card-text fw-bold">{item.price}</p>
-                <ItemCount stock="10" initial="" key={item.id}/>
-            </div>
-        </div>
+            <Item key={item.id} title={item.title} description={item.description} price={item.price} id={item.id}/>
           );
         })}
       </div>
