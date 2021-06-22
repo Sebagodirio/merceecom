@@ -56,6 +56,7 @@ export const ItemList = (props) => {
               key={item.id}
               title={item.title}
               description={item.description}
+              cat={catName}
               price={item.price}
               id={item.id}
             />

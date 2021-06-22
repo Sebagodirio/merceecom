@@ -35,7 +35,7 @@ const App = () => {
             description="Alguna descripcion"
           />
         </Route>
-        <Route exact path="/catalogo">
+        <Route exact path="/about">
           <About />
         </Route>
       </Switch>
