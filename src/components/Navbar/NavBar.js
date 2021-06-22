@@ -41,27 +41,27 @@ export const NavBar = () => {
                 <NavLink
                   className="dropdown-item"
                   activeClassName="selected"
-                  to={"/category/1"}
+                  to={"/category/drama"}
                 >
-                  categoria1
+                  Drama
                 </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
                 <NavLink
                   className="dropdown-item"
                   activeClassName="selected"
-                  to={"/category/2"}
+                  to={"/category/accion"}
                 >
-                  categoria2
+                  Accion
                 </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
                 <NavLink
                   className="dropdown-item"
                   activeClassName="selected"
-                  to={"/category/3"}
+                  to={"/category/aventura"}
                 >
-                  categoria3
+                  Aventura
                 </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -76,6 +76,7 @@ export const NavBar = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          
           <Nav>
             <Nav.Link href="#">
               <CartWidget />

@@ -13,7 +13,7 @@ export const Item = (props) => {
           <h5 className="card-title">{title}</h5>
         </NavLink>
         <p className="card-text">{description}</p>
-        <p className="card-text fw-bold">{price}</p>
+        <p className="card-text fw-bold">${price}</p>
         <ItemCount stock="10" initial="" key={id} />
       </div>
     </div>

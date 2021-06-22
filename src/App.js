@@ -6,12 +6,6 @@ import About from "./components/About/About"
 
 const App = () => {
   return (
-    /* <div className="App">
-        <NavBar />
-        <ItemListContainer greeting="Hola mundo!" description="Alguna descripcion"/>
-        <ItemDetailContainer greeting="Hola mundo!" description="Alguna descripcion" price={1200} id={1}/>
-    </div> */
-
     <BrowserRouter>
       <NavBar />
       <Switch>
@@ -21,7 +15,7 @@ const App = () => {
             description="Alguna descripcion"
           />
         </Route>
-        <Route exact path="/category/:id">
+        <Route exact path="/category/:name">
           <ItemListContainer
             greeting="Harry potter 7"
             description="Alguna descripcion"

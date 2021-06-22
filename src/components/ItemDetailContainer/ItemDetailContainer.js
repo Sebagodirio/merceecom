@@ -27,18 +27,17 @@ export const ItemDetailContainer = (item) => {
         console.log(error);
       });
   }, []);
-  console.log(result)
+
   return (
     <div>
       <div className="d-flex flex-wrap justify-content-around container mt-5 mb-5">
         <ItemDetail
           key={id}
-          //title={result.title}
+          title={greeting}
           
           description={description}
           price={price}
         />
-        );
       </div>
     </div>
   );
