@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import libro from "../ItemDetail/img/indice.jpg"
 import ItemCount from "../ItemCount/ItemCount"
 
 export const ItemDetail = (props) => {
-    const {title,description,price} = props
+    const {title,description,price,amount} = props
+    console.log(amount)
     return (
         <div className="d-flex border w-50">
             <div>
@@ -14,7 +15,7 @@ export const ItemDetail = (props) => {
                 <p className="card-text">{description}</p>
                 <p className="card-text fw-bold">${price}</p>
                 <div>
-                    <ItemCount stock="10" initial=""/>
+                    <ItemCount stock="10" initial="" />
                 </div>
                 
             </div>
